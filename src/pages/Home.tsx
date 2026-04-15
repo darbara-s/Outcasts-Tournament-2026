@@ -66,13 +66,13 @@ const Home = () => {
           className="flex flex-col items-center text-center -mt-2"
         >
           <h1 className="flex flex-col items-center">
-            <span className="text-6xl md:text-8xl font-display font-black text-white leading-[0.7] tracking-tighter" style={{ fontSize: 'clamp(3rem, 12svh, 6rem)' }}>
+            <span className="text-6xl md:text-8xl font-display font-black text-white leading-[0.7] tracking-tighter" style={{ fontSize: 'clamp(2.7rem, 10svh, 5.4rem)' }}>
               BERLIN
             </span>
-            <span className="block italic font-black text-transparent bg-clip-text bg-[linear-gradient(110deg,#FF8C00,45%,#fff,55%,#FF8C00)] bg-[length:200%_100%] animate-shine pr-6 drop-shadow-[0_10px_30px_rgba(255,140,0,0.4)] leading-[0.9]" style={{ fontSize: 'clamp(4rem, 16svh, 9rem)' }}>
+            <span className="block italic font-black text-transparent bg-clip-text bg-[linear-gradient(110deg,#FF8C00,45%,#fff,55%,#FF8C00)] bg-[length:200%_100%] animate-shine pr-6 drop-shadow-[0_10px_30px_rgba(255,140,0,0.4)] leading-[0.9]" style={{ fontSize: 'clamp(3.6rem, 14svh, 8.1rem)' }}>
               PREMIER
             </span>
-            <span className="tracking-[0.2em] text-brand-blue font-black uppercase leading-[0.7] mt-1 pr-1" style={{ fontSize: 'clamp(2rem, 6svh, 4rem)' }}>
+            <span className="tracking-[0.2em] text-brand-blue font-black uppercase leading-[0.7] mt-1 pr-1" style={{ fontSize: 'clamp(1.8rem, 5svh, 3.6rem)' }}>
               LEAGUE 2026
             </span>
           </h1>
