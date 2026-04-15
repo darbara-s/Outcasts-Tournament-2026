@@ -169,12 +169,12 @@ const Home = () => {
             </motion.div>
           </div>
 
-          {/* Row 2 - Inverse or Offset */}
+          {/* Row 2 - Inverse direction (Right) */}
           <div className="flex relative overflow-hidden h-11">
             <motion.div 
               className="flex gap-3 absolute whitespace-nowrap"
               initial={{ x: "-50%" }}
-              animate={{ x: ["50%", "0%"] }}
+              animate={{ x: ["-50%", "0%"] }}
               transition={{ 
                 duration: 50, 
                 repeat: Infinity, 
