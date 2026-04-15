@@ -63,7 +63,7 @@ const Home = () => {
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="flex flex-col items-center text-center -mt-2"
+          className="flex flex-col items-center text-center mt-3"
         >
           <h1 className="flex flex-col items-center">
             <span className="font-display font-black text-white leading-[0.7] tracking-tighter" style={{ fontSize: 'clamp(2.5rem, 9.5svh, 5rem)' }}>
