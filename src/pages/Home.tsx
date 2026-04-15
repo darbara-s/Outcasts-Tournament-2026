@@ -142,7 +142,7 @@ const Home = () => {
         transition={{ delay: 0.6 }}
         className="pb-6 w-full overflow-hidden" 
         style={{ marginTop: 'var(--space-marquee-top)' }}
-      >   >
+      >
         <p className="text-center text-[10px] font-black uppercase tracking-[0.4em] text-white/60 mb-3 bg-clip-text">
           Official Tournament Partners
         </p>
