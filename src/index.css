@@ -26,6 +26,11 @@
     0% { background-position: -200% center; }
     100% { background-position: 200% center; }
   }
+
+  /* Dynamic Poster Scaling Variables */
+  --space-hero-top: clamp(1rem, 6svh, 4rem);
+  --space-main-gap: clamp(0.5rem, 3svh, 2.5rem);
+  --space-stats-gap: clamp(0.25rem, 1.5svh, 1rem);
 }
 
 @layer base {

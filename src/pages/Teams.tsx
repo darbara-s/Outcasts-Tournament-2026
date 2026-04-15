@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const Teams = () => {
   return (
-    <div className="flex flex-col h-screen max-h-screen overflow-hidden px-6 pt-16 pb-24 relative">
-      {/* Header Section - Pushed down to avoid being cut off */}
-      <div className="flex flex-col gap-1 text-center shrink-0 mb-4">
+    <div className="flex flex-col h-[calc(100svh-80px)] overflow-hidden px-6 relative" style={{ paddingTop: 'var(--space-hero-top)' }}>
+      {/* Header Section - Dynamic spacing */}
+      <div className="flex flex-col text-center shrink-0 mb-4" style={{ gap: 'var(--space-stats-gap)' }}>
         <h1 className="text-2xl font-display font-bold uppercase tracking-tight text-white">Participating Teams</h1>
         <p className="text-white/40 text-[10px] uppercase tracking-wider">Berlin Premier League Roster</p>
       </div>

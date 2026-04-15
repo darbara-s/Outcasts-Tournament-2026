@@ -42,9 +42,12 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col flex-grow px-6 pt-14 pb-2 relative h-full min-h-[calc(100vh-80px)] overflow-hidden">
+    <div className="flex flex-col flex-grow px-6 pb-2 relative h-full min-h-[calc(100svh-80px)] overflow-hidden" style={{ paddingTop: 'var(--space-hero-top)' }}>
       {/* Hero Section Container */}
-      <div className="flex flex-col items-center flex-grow justify-start gap-6 pt-2">
+      <div 
+        className="flex flex-col items-center flex-grow justify-start" 
+        style={{ gap: 'var(--space-main-gap)' }}
+      >
         
         {/* Updated Pill Button */}
         <motion.div 
@@ -56,31 +59,32 @@ const Home = () => {
           <span>Cricket Tournament</span>
         </motion.div>
 
-        {/* BPL Logo Unit - High impact branding */}
+        {/* BPL Logo Unit - Scaling with clamp for consistency */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="flex flex-col items-center text-center -mt-2"
         >
           <h1 className="flex flex-col items-center">
-            <span className="text-6xl md:text-8xl font-display font-black text-white leading-[0.7] tracking-tighter">
+            <span className="text-6xl md:text-8xl font-display font-black text-white leading-[0.7] tracking-tighter" style={{ fontSize: 'clamp(3rem, 12svh, 6rem)' }}>
               BERLIN
             </span>
-            <span className="block italic text-[80px] md:text-[140px] font-black text-transparent bg-clip-text bg-[linear-gradient(110deg,#FF8C00,45%,#fff,55%,#FF8C00)] bg-[length:200%_100%] animate-shine pr-6 drop-shadow-[0_10px_30px_rgba(255,140,0,0.4)] leading-[0.9]">
+            <span className="block italic font-black text-transparent bg-clip-text bg-[linear-gradient(110deg,#FF8C00,45%,#fff,55%,#FF8C00)] bg-[length:200%_100%] animate-shine pr-6 drop-shadow-[0_10px_30px_rgba(255,140,0,0.4)] leading-[0.9]" style={{ fontSize: 'clamp(4rem, 16svh, 9rem)' }}>
               PREMIER
             </span>
-            <span className="text-4xl md:text-6xl tracking-[0.2em] text-brand-blue font-black uppercase leading-[0.7] mt-1 pr-1">
+            <span className="tracking-[0.2em] text-brand-blue font-black uppercase leading-[0.7] mt-1 pr-1" style={{ fontSize: 'clamp(2rem, 6svh, 4rem)' }}>
               LEAGUE 2026
             </span>
           </h1>
         </motion.div>
 
-        {/* Stats Grid */}
+        {/* Stats Grid - Dynamic Gaps */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="grid grid-cols-3 gap-2 w-full max-w-sm mx-auto mt-2"
+          className="grid grid-cols-3 w-full max-w-sm mx-auto mt-2"
+          style={{ gap: 'var(--space-stats-gap)' }}
         >
           <div className="glass-card p-3 flex flex-col items-center text-center justify-center border-green-500/30 bg-green-500/10 backdrop-blur-2xl">
             <Euro className="text-green-400 mb-1" size={18} />
