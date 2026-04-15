@@ -131,38 +131,70 @@ const Home = () => {
         </motion.div>
       </div>
 
-      {/* Auto-scrolling Sponsor Carousel - Logo size increased for fill */}
+      {/* Auto-scrolling Sponsor Carousel - Double Row */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
-        className="pb-4 w-full overflow-hidden mt-2"
+        className="pb-6 w-full overflow-hidden mt-0"
       >
-        <p className="text-center text-[9px] font-black uppercase tracking-[0.3em] text-white/50 mb-3">Official Tournament Partners</p>
+        <p className="text-center text-[10px] font-black uppercase tracking-[0.4em] text-white/60 mb-3 bg-clip-text">
+          Official Tournament Partners
+        </p>
         
-        <div className="flex relative overflow-hidden h-14">
-          <motion.div 
-            className="flex gap-4 absolute whitespace-nowrap"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ 
-              duration: 35, 
-              repeat: Infinity, 
-              ease: "linear" 
-            }}
-          >
-            {[...sponsors, ...sponsors].map((sponsor, i) => (
-              <a 
-                key={i}
-                href={sponsor.url}
-                className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/15 transition-all backdrop-blur-md group"
-              >
-                <div className="w-6 h-6 rounded-full bg-brand-orange/20 flex items-center justify-center text-[10px] font-black text-brand-orange group-hover:scale-110 transition-transform">
-                  {sponsor.name.charAt(0)}
-                </div>
-                <span className="text-[11px] font-black text-white/80 group-hover:text-white transition-colors uppercase tracking-tight">{sponsor.name}</span>
-              </a>
-            ))}
-          </motion.div>
+        <div className="flex flex-col gap-3">
+          {/* Row 1 */}
+          <div className="flex relative overflow-hidden h-11">
+            <motion.div 
+              className="flex gap-3 absolute whitespace-nowrap"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ 
+                duration: 45, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
+            >
+              {[...sponsors, ...sponsors].map((sponsor, i) => (
+                <a 
+                  key={`r1-${i}`}
+                  href={sponsor.url}
+                  className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full hover:bg-white/15 transition-all backdrop-blur-md group"
+                >
+                  <div className="w-5 h-5 rounded-full bg-brand-orange/20 flex items-center justify-center text-[9px] font-black text-brand-orange group-hover:scale-110 transition-transform">
+                    {sponsor.name.charAt(0)}
+                  </div>
+                  <span className="text-[10px] font-black text-white/70 group-hover:text-white transition-colors uppercase tracking-tight">{sponsor.name}</span>
+                </a>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Row 2 - Inverse or Offset */}
+          <div className="flex relative overflow-hidden h-11">
+            <motion.div 
+              className="flex gap-3 absolute whitespace-nowrap"
+              initial={{ x: "-50%" }}
+              animate={{ x: ["50%", "0%"] }}
+              transition={{ 
+                duration: 50, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
+            >
+              {[...sponsors, ...sponsors].reverse().map((sponsor, i) => (
+                <a 
+                  key={`r2-${i}`}
+                  href={sponsor.url}
+                  className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full hover:bg-white/15 transition-all backdrop-blur-md group"
+                >
+                  <div className="w-5 h-5 rounded-full bg-brand-blue/20 flex items-center justify-center text-[9px] font-black text-brand-blue group-hover:scale-110 transition-transform">
+                    {sponsor.name.charAt(0)}
+                  </div>
+                  <span className="text-[10px] font-black text-white/70 group-hover:text-white transition-colors uppercase tracking-tight">{sponsor.name}</span>
+                </a>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </motion.div>
 
