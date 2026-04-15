@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Home, Users, Award, UserCircle } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';

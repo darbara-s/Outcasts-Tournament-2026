@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { UserCircle, Lock, LogIn, Clipboard, UserPlus, Trash2, LogOut, UserCheck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Modal from '../components/Modal';
@@ -212,7 +212,7 @@ const MyTeam = () => {
 
         <div className="space-y-3">
           <AnimatePresence>
-            {roster.map((player, i) => (
+            {roster.map((player) => (
               <motion.div 
                 key={player.jersey}
                 initial={{ opacity: 0, x: -20 }}

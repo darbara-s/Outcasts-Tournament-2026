@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Trophy, Calendar, Euro, Users, ExternalLink, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Modal from '../components/Modal';

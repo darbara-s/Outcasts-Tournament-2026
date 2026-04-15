@@ -1,4 +1,3 @@
-import React from 'react';
 import { Award, MessageCircle, Mail, ExternalLink, ShieldCheck, Zap, Star, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
