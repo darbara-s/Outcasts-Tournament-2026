@@ -42,10 +42,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="flex flex-col flex-grow px-6 pb-2 relative h-full min-h-[calc(100svh-80px)] overflow-hidden" style={{ paddingTop: 'var(--space-hero-top)' }}>
-      {/* Hero Section Container */}
+    <div className="flex flex-col px-6 pb-2 relative h-[calc(100svh-80px)] overflow-hidden justify-center" style={{ paddingTop: 'var(--space-hero-top)' }}>
+      {/* Hero Section Container - No flex-grow to prevent massive gaps */}
       <div 
-        className="flex flex-col items-center flex-grow justify-start" 
+        className="flex flex-col items-center" 
         style={{ gap: 'var(--space-main-gap)' }}
       >
         
@@ -55,49 +55,49 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/20 text-brand-orange text-[9px] md:text-xs font-bold uppercase tracking-[0.2em] border border-brand-orange/30 shadow-[0_0_15px_rgba(255,140,0,0.1)]"
         >
-          <Trophy size={12} />
+          <Trophy size={11} />
           <span>Cricket Tournament</span>
         </motion.div>
 
-        {/* BPL Logo Unit - Scaling with clamp for consistency */}
+        {/* BPL Logo Unit - Refined scaling for viewport safety */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           className="flex flex-col items-center text-center -mt-2"
         >
           <h1 className="flex flex-col items-center">
-            <span className="text-6xl md:text-8xl font-display font-black text-white leading-[0.7] tracking-tighter" style={{ fontSize: 'clamp(2.7rem, 10svh, 5.4rem)' }}>
+            <span className="font-display font-black text-white leading-[0.7] tracking-tighter" style={{ fontSize: 'clamp(2.5rem, 9.5svh, 5rem)' }}>
               BERLIN
             </span>
-            <span className="block italic font-black text-transparent bg-clip-text bg-[linear-gradient(110deg,#FF8C00,45%,#fff,55%,#FF8C00)] bg-[length:200%_100%] animate-shine pr-6 drop-shadow-[0_10px_30px_rgba(255,140,0,0.4)] leading-[0.9]" style={{ fontSize: 'clamp(3.6rem, 14svh, 8.1rem)' }}>
+            <span className="block italic font-black text-transparent bg-clip-text bg-[linear-gradient(110deg,#FF8C00,45%,#fff,55%,#FF8C00)] bg-[length:200%_100%] animate-shine pr-6 drop-shadow-[0_10px_30px_rgba(255,140,0,0.4)] leading-[0.9]" style={{ fontSize: 'clamp(3.3rem, 13svh, 7.5rem)' }}>
               PREMIER
             </span>
-            <span className="tracking-[0.2em] text-brand-blue font-black uppercase leading-[0.7] mt-1 pr-1" style={{ fontSize: 'clamp(1.8rem, 5svh, 3.6rem)' }}>
+            <span className="tracking-[0.2em] text-brand-blue font-black uppercase leading-[0.7] mt-1 pr-1" style={{ fontSize: 'clamp(1.7rem, 4.5svh, 3.2rem)' }}>
               LEAGUE 2026
             </span>
           </h1>
         </motion.div>
 
-        {/* Stats Grid - Dynamic Gaps */}
+        {/* Stats Grid - Tighter Dynamic Gaps */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="grid grid-cols-3 w-full max-w-sm mx-auto mt-2"
+          className="grid grid-cols-3 w-full max-w-sm mx-auto mt-1"
           style={{ gap: 'var(--space-stats-gap)' }}
         >
           <div className="glass-card p-3 flex flex-col items-center text-center justify-center border-green-500/30 bg-green-500/10 backdrop-blur-2xl">
-            <Euro className="text-green-400 mb-1" size={18} />
+            <Euro className="text-green-400 mb-1" size={16} />
             <p className="text-[8px] text-white/50 uppercase font-bold tracking-widest">Prize</p>
             <p className="text-sm font-display font-black text-green-400 mt-0.5">€1,000</p>
           </div>
           <div className="glass-card p-3 flex flex-col items-center text-center justify-center border-brand-blue/30 bg-brand-blue/10 backdrop-blur-2xl">
-            <Users className="text-brand-blue mb-1" size={18} />
+            <Users className="text-brand-blue mb-1" size={16} />
             <p className="text-[8px] text-white/50 uppercase font-bold tracking-widest">Entry</p>
             <p className="text-sm font-display font-black text-brand-blue mt-0.5">€250</p>
           </div>
           <div className="glass-card p-3 flex flex-col items-center text-center justify-center border-brand-orange/30 bg-brand-orange/10 backdrop-blur-2xl">
-            <Calendar className="text-brand-orange mb-1" size={18} />
+            <Calendar className="text-brand-orange mb-1" size={16} />
             <p className="text-[8px] text-white/50 uppercase font-bold tracking-widest">Dates</p>
             <p className="text-sm font-display font-black text-brand-orange mt-0.5">July 5-13</p>
           </div>
@@ -140,8 +140,9 @@ const Home = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
-        className="pb-6 w-full overflow-hidden mt-0"
-      >
+        className="pb-6 w-full overflow-hidden" 
+        style={{ marginTop: 'var(--space-marquee-top)' }}
+      >   >
         <p className="text-center text-[10px] font-black uppercase tracking-[0.4em] text-white/60 mb-3 bg-clip-text">
           Official Tournament Partners
         </p>

@@ -27,10 +27,11 @@
     100% { background-position: 200% center; }
   }
 
-  /* Dynamic Poster Scaling Variables */
-  --space-hero-top: clamp(1rem, 6svh, 4rem);
-  --space-main-gap: clamp(0.5rem, 3svh, 2.5rem);
-  --space-stats-gap: clamp(0.25rem, 1.5svh, 1rem);
+  /* Refined Dynamic Poster Scaling Variables */
+  --space-hero-top: clamp(1rem, 5svh, 3rem);
+  --space-main-gap: clamp(0.4rem, 2.5svh, 1.8rem);
+  --space-stats-gap: clamp(0.2rem, 1.2svh, 0.8rem);
+  --space-marquee-top: clamp(1rem, 4svh, 2.5rem);
 }
 
 @layer base {
